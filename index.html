@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                Blue_Lime: '#4195D5',
+                Blue_Dark:'#133F5D',
+                Green_Lime:'#93C854',
+
+              }
+            }
+          }
+        }
+      </script>
+
+      
+
+   
+    <title>Document</title>
+</head>
+<body>
+ 
+   
+
+  <nav class="">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="" class="flex items-center">
+          <img src="./image/Logo.svg" class="h-12 mr-3" alt="Paperid Logo" />
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white md:p-0 dark:text-white">PRODUK</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white md:p-0 ">SOLUSI BISNIS</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white md:p-0 ">CARA KERJA</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white md:p-0 ">HARGA</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white md:p-0 ">PERUSAHAAN</a>
+          </li>
+          <li>
+            <a href="#" class="block sm:hidden border rounded-full border-Green_Lime py-3 px-7 text-Green_Lime text-center mt-7 md:p-0 ">LOGIN</a>
+          </li>
+          <li>
+            <a href="#" class="block sm:hidden bg-Green_Lime rounded-full py-3 px-7 my-4 text-center text-white md:p-0 ">DAFTAR</a>
+          </li>
+        </ul>
+      </div>
+      <div class="sm:flex gap-3 mt-5 sm:mt-0 hidden">
+        <button class="rounded-full border border-Green_Lime py-2 px-7 text-Green_Lime">LOGIN</button>
+        <button class="bg-Green_Lime rounded-full py-2 px-7 text-white">DAFTAR</button>
+      </div>
+    </div>
+  </nav>
+  
+
+
+
+
+  <div class="sm:flex  sm:container sm:mx-auto sm:my-16 pb-36">
+    <div class="w-full px-4 mt-7">
+        <p class="text-white text-xs sm:text-3xl font-light my-5">Simulasikan Pembayaran Lebih Cepat dengan</p>
+        <h1 class="text-white text-4xl sm:text-6xl leading-snug font-medium">API Embeded <br/>Financing Paper!</h1>
+    </div>
+    <div class="my-2">
+        <div class="flex justify-start">
+            <div class="" style="padding:16px; background: linear-gradient(111deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 10px; border: 1.50px #2E72A4 solid; backdrop-filter: blur(24px); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                <form class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px]" id="form-onboarding">
+                    <h3 class="font-semibold text-lg text-center mb-6">Lihat Simulasi pinjaman</h3>
+                    <div class="mb-4">
+                      <h3 class="font-medium text-base">Jumlah Pinjaman</h3>
+                      <input type="number" id="email" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-2xl my-4 w-full" placeholder="Rp 0" required>
+                    </div>
+                    <div class="mb-6">
+                      <h3 class="font-medium text-base">Estimasi Fee</h3>
+                      <input type="number" id="password" class="text-Blue_Lime text-2xl my-4 w-full" placeholder="0%" required>
+                    </div>
+                    <div class="flex justify-center">
+                        <button onclick="" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Daftar Sekarang !</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="w-full mt-10 pt-5 pb-36 bg-white">
+    <div class="sm:flex sm:justify-center sm:container sm:mx-auto mt-32 mb-9">
+        <h1 class="text-Blue_Dark font-bold text-3xl text-center sm:text-5xl">Proses Pendaftaran SmartCart Pay Later</h1>
+    </div>
+
+    <div class="sm:flex mt-16 mx-auto container">
+
+        <div class="tab px-4">
+            <button class="tablinks" onclick="openCity(event, 'Pendaftaran-1')" id="defaultOpen"><a class="flex gap-5"><h1 class="sm:text-5xl font-semibold">1</h1>Isi data diri dan unggah dokumen legal Anda (SIUP, Akta Perusahaan, dll) pada halaman Pendaftaran</a></button>
+            <button class="tablinks" onclick="openCity(event, 'Pendaftaran-2')"><a class="flex gap-5"><h1 class="sm:text-5xl font-semibold">2</h1>Dapatkan persetujuan penawaran dari berbagai macam lembaga keuangan penyedia pembayaran.</a></button>
+            <button class="tablinks" onclick="openCity(event, 'Pendaftaran-3')"><a class="flex gap-5"><h1 class="sm:text-5xl font-semibold">3</h1>Tanda tangan dokumen secara digital.</a></button>
+            <button class="tablinks" onclick="openCity(event, 'Pendaftaran-4')"><a class="flex gap-5"><h1 class="sm:text-5xl font-semibold">4</h1>Selesai! Anda dapat langsung melakukan transaksi dengan Paper Usaha.</a></button>
+
+        </div>
+        <div class="flex justify-center mx-auto px-9">
+            <div id="Pendaftaran-1" class="tabcontent mx-auto flex justify-center">
+                <img class="sm:min-w-[570px]" src="./image/Pendaftaran-1.svg">
+              </div>
+              
+              <div id="Pendaftaran-2" class="tabcontent justify-center">
+                <img class="sm:min-w-[570px]" src="./image/Pendaftaran-2.svg">
+              </div>
+              
+              <div id="Pendaftaran-3" class="tabcontent justify-center">
+                <img class="sm:min-w-[570px]" src="./image/Pendaftaran-3.svg">
+              </div>
+              <div id="Pendaftaran-4" class="tabcontent justify-center">
+                <img class="sm:min-w-[570px]" src="./image/Pendaftaran-4.svg">
+              </div>
+        </div>
+          
+          
+        
+    </div>
+
+
+
+
+
+  </div>
+
+
+  <div class="w-full bg-gray-50">
+    <div class="sm:flex sm:mx-auto container pt-20 px-10 sm:pt-36 pb-20">
+        <div class="px-4 sm:pr-28 mt-4 sm:mt-24">
+            <h1 class="text-Blue_Dark sm:text-4xl sm:text-left  mb-4  text-2xl sm:leading-normal font-semibold">Lihat Simulasi Penggunaan Limit Yang Diberikan !</h1>
+        </div>
+    
+        
+            <div class="flex my-2">
+               
+                <div class="w-full max-w-lg bg-white  rounded-lg shadow ">
+                  <a href="#">
+                      <img class="p-5 w-full rounded-t-lg" src="./image/Rectangle 2595.png" alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                      <a href="#">
+                          <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-black">EVEDAL Night Lamp</h5>
+                      </a>
+                      <div class="sm:flex sm:items-center sm:justify-between my-6">
+                          <div class="flex gap-3"><span class="text-2xl text-Blue_Lime font-bold ">Rp</span><h2 class="font-bold text-2xl text-Blue_Lime">5.000.000</h2></div>
+                          <div class="flex h-6rounded-lg relative bg-transparent mt-1 sm:pl-10">
+                            <button data-action="decrement" class=" bg-gray-50 text-Blue_Lime hover:text-Blue_Lime hover:bg-gray-100 h-full rounded-l cursor-pointer outline-none">
+                              <span class="m-auto text-2xl sm:px-5 font-bold">−</span>
+                            </button>
+                            <input type="number" class="focus:outline-none sm:max-w-[80px] text-center bg-gray-50 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="50"></input>
+                          <button data-action="increment" class=" text-Blue_Lime  hover:bg-gray-100 h-full  rounded-r cursor-pointer bg-gray-50">
+                            <span class="m-auto text-2xl sm:px-5 font-bold">+</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flex justify-center sm:mt-10">
+                        <a href="#" class="block bg-Green_Lime rounded-full py-3 px-16  text-center text-white">Bayar Sekarang</a>
+                      </div>
+                  </div>
+                </div>
+
+            </div>
+
+    </div>
+  </div>
+
+
+  <div class="w-full pt-5 pb-36 bg-white">
+    <div class="sm:flex justify-center container mx-auto mt-32 mb-9">
+        <h1 class="text-Blue_Dark font-semibold text-center sm:text text-3xl sm:text-5xl">Manfaat yang Bisa Anda Rasakan</h1>
+    </div>
+
+    <div class="sm:flex container mx-auto px-7 py-20">
+        <div class="px-8">
+            <ol class="relative text-gray-500 border-l border-gray-200 dark:border-gray-700 dark:text-gray-400">                  
+                <li class="mb-10 ml-6">            
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-Green_Lime rounded-full -left-4 ring-4 ring-white">
+                        <svg class="w-3.5 h-3.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        </svg>
+                    </span>
+                    <h3 class="font-medium text-4xl text-Blue_Dark leading-tight">One Time Integration</h3>
+                    <p class="text-lg text-Blue_Dark font-light mt-4">Menyediakan solusi pembiayaan dengan cara yang nyaman dan efisien bagi bisnis melalui satu proses integrasi.</p>
+                </li>
+                <li class="mb-10 ml-6">            
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-Green_Lime rounded-full -left-4 ring-4 ring-white">
+                        <svg class="w-3.5 h-3.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        </svg>
+                    </span>
+                    <h3 class="font-medium text-4xl text-Blue_Dark leading-tight">Seamless User Experiance</h3>
+                    <p class="text-lg text-Blue_Dark font-light mt-4">Proses pengajuan pinjaman dengan lebih mudah tanpa harus berinteraksi atau menelepon pihak pemberi pinjaman.</p>
+                </li>
+                <li class="mb-10 ml-6">            
+                    <span class="absolute flex items-center text-white justify-center w-8 h-8 bg-Green_Lime rounded-full -left-4 ring-4 ring-white">
+                        <svg class="w-3.5 h-3.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        </svg>
+                    </span>
+                    <h3 class="font-medium text-4xl text-Blue_Dark leading-tight">One Submition For Multiple Financial Institutions</h3>
+                    <p class="text-lg text-Blue_Dark font-light mt-4">Cukup dengan satu kali pendaftaran, Anda dapat langsung diproses secara otomatis ke beberapa lembaga keuangan.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex justify-start ">
+            <img class="sm:min-w-[473px]" src="./image/cover.svg">
+        </div>
+
+
+
+    </div>
+   
+  </div>
+
+  <div class="sm:flex sm:gap-14 container mx-auto px-7 py-20">
+    <div class="">
+        <img class="sm:min-w-[275px]" src="./image/Lady 2.svg">
+    </div>
+    <div class="py-16">
+      <h1 class="text-white font-semibold text-2xl sm:text-4xl leading-normal">Solusi Pembayaran untuk Kelancaran <br/>
+        Cashflow Bisnis via Paper id</h1>
+        <button class="text-white bg-Green_Lime  font-medium rounded-full text-base w-full sm:w-auto px-11 py-5 text-center mt-6">Daftar Gratis Sekarang !</button>
+
+  </div>
+ </div>
+
+ <div class="container mx-auto border-t border-b border-white py-5 px-3">
+  <a href="https://www.paper.id/" class="flex items-center">
+    <img src="./image/Logo.svg" class="h-12 " alt="Logo">
+  </a>
+  <div class="sm:flex sm:justify-between">
+
+    <div class="sm:flex sm:justify-start">
+      <div>
+        <h3 class="text-white mt-10">Hubungi Kami</h3>
+        <ul>
+          <li class=" flex gap-3 text-white sm:text-sm text-xs font-extralight my-3">
+            <span>
+              <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"/>
+              </svg>
+            </span>
+            +62 821 1767 9137 <br/> +62 811 1098 746 (WA)
+          </li>
+          <li class="flex text-white text-sm gap-3  font-extralight mb-3">
+            <span>
+              <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
+              </svg>
+            </span>
+            support@paper.id
+          </li>
+          <li class="flex text-white text-sm gap-3  font-extralight">
+            <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
+            </svg>
+            </span>
+            Jl. Sunter Garden Raya <br/> No.5D, RT.6/RW.12, Sunter <br/>Agung, Tj. Priok, Kota Jkt <br/> Utara, DKI Jakarta 14350
+          </li>
+        </ul>
+      </div>
+      <div class="sm:mx-5">
+        <h3 class="text-white mt-10">Jam Oprasional</h3>
+        <p class="text-white text-sm  font-extralight my-2">Senin - Jummat          :  07.00 - 22.00 </p>
+        <p class="text-white text-sm  font-extralight">Sabtu - Libur Nasional  :  08.00 - 17.00 </p>
+      </div>
+    </div>
+
+
+    <div class="sm:flex sm:justify-start">
+      <div class="sm:mx-8">
+        <h3 class="text-white mt-10"> Fitur Lainnya</h3>
+        <ul>
+          <li class="text-white text-sm  font-extralight my-3">Order Dan Penawaran</li>
+          <li class="text-white text-sm  font-extralight mb-3">Akutansi Gratis</li>
+          <li class="text-white text-sm  font-extralight mb-3">Digital Payment</li>
+          <li class="text-white text-sm  font-extralight mb-3">Manajemen Stok</li>
+          <li class="text-white text-sm  font-extralight mb-3">Laporan Keuangan</li>
+          <li class="text-white text-sm  font-extralight mb-3">One Click Share</li>
+          <li class="text-white text-sm  font-extralight mb-3">Tamplate Invoice</li>
+        </ul>
+      </div>
+      <div class="text-white mt-16">
+        <ul>
+          <li class="text-white text-sm  font-extralight my-3">Billing</li>
+          <li class="text-white text-sm  font-extralight mb-3">Financing</li>
+          <li class="text-white text-sm  font-extralight mb-3">Paper Chain</li>
+          <li class="text-white text-sm  font-extralight mb-3">Paper Trade</li>
+          <li class="text-white text-sm  font-extralight mb-3">Enterpraise Solution</li>
+          <li class="text-white text-sm  font-extralight mb-3">PayPer</li>
+        </ul>
+      </div>
+      <div class="sm:mx-8">
+        <h3 class="text-white mt-10"> Solusi</h3>
+        <ul>
+          <li class="text-white text-sm  font-extralight my-3">Jual Beli</li>
+          <li class="text-white text-sm  font-extralight mb-3">Jasa</li>
+          <li class="text-white text-sm  font-extralight mb-3">F&B</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white mt-10">Perusahaan</h3>
+        <ul>
+          <li class="text-white text-sm  font-extralight my-3">Tentang Kami</li>
+          <li class="text-white text-sm  font-extralight mb-3">Cara Kerja</li>
+          <li class="text-white text-sm  font-extralight mb-3">Karir</li>
+          <li class="text-white text-sm  font-extralight mb-3">Pricing</li>
+          <li class="text-white text-sm  font-extralight mb-3">Blog</li>
+          <li class="text-white text-sm  font-extralight mb-3">Help Center</li>
+          <li class="text-white text-sm  font-extralight mb-3">Faq</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+ <div class="sm:flex sm:justify-center pl-3 sm:pl-0 py-8 gap-5 container mx-auto">
+  <div class="sm:text-center"><p class="text-white text-sm font-medium my-3">Download Paper.id APP</p><img src="./image/playstore-icon 1.png"></div>
+  <div class="sm:text-center">
+    <p class="text-white text-sm  font-medium my-3">Keamanan</p>
+    <div class="sm:flex sm:justify-center gap-4">
+      <img class="min-w-[100px] mb-6 sm:mb-0" src="./image/secure-white 1.svg">
+      <img class="mb-6 sm:mb-0" src="./image/kan_logo_27001.png">
+      <img src="./image/bv_certification_ISO27001.png">
+    </div>
+  </div>
+
+</div>
+
+<div class="container mx-auto sm:flex sm:justify-between border-t border-white py-8 pl-3 sm:pl-0">
+  <div class="mb-6 sm:mb-0"><p class="text-white text-sm font-extralight">Copyright © 2023 Paper.id (PT Pakar Digital Global)</p></div>
+  <div class="mb-6 sm:mb-0">
+    <ul class="flex justify-start gap-3">
+      <li class="border rounded-full border-white px-2 py-2">
+        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+          <path fill-rule="evenodd" d="M19.7 3.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.84c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.84A4.225 4.225 0 0 0 .3 3.038a30.148 30.148 0 0 0-.2 3.206v1.5c.01 1.071.076 2.142.2 3.206.094.712.363 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.15 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965c.124-1.064.19-2.135.2-3.206V6.243a30.672 30.672 0 0 0-.202-3.206ZM8.008 9.59V3.97l5.4 2.819-5.4 2.8Z" clip-rule="evenodd"/>
+        </svg>
+      </li>
+      <li class="border rounded-full border-white px-2 py-2">
+        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+          <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+        </svg>
+      </li>
+      <li class="border rounded-full border-white px-2 py-2">
+        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clip-rule="evenodd"/>
+          <path d="M3 5.012H0V15h3V5.012Z"/>
+        </svg>      
+      </li>
+      <li class="border rounded-full border-white px-2 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white dark:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 50 50">
+          <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+      </svg>     
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="flex justify-start gap-5">
+      <li class="text-white text-sm  font-medium">Privacy Policy</li>
+      <li class="text-white text-sm  font-medium">Term & Condition</li>
+      <li class="text-white text-sm  font-medium">Sitemap</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+
+
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+  
+</body>
+</html>

@@ -85,20 +85,303 @@
     <div class="my-2">
         <div class="flex justify-start">
             <div class="" style="padding:16px; background: linear-gradient(111deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 10px; border: 1.50px #2E72A4 solid; backdrop-filter: blur(24px); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
-                <form class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px]" id="form-onboarding">
+                <form id="form-onboard-01" class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px]">
                     <h3 class="font-semibold text-lg text-center mb-6">Lihat Simulasi pinjaman</h3>
                     <div class="mb-4">
                       <h3 class="font-medium text-base">Jumlah Pinjaman</h3>
-                      <input type="number" id="email" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-2xl my-4 w-full" placeholder="Rp 0" required>
+                      <input type="number" id="Loan" name="loan" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-2xl my-4 w-full" placeholder="Rp 0" required >
                     </div>
                     <div class="mb-6">
                       <h3 class="font-medium text-base">Estimasi Fee</h3>
-                      <input type="number" id="password" class="text-Blue_Lime text-2xl my-4 w-full" placeholder="0%" required>
+                      <input type="number" id="fee" name="fee" class="text-Blue_Lime text-2xl my-4 w-full" placeholder="0%" required >
                     </div>
+                    
                     <div class="flex justify-center">
-                        <button onclick="" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Daftar Sekarang !</button>
+                        <button type="button" onclick="hide01();" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Daftar Sekarang !</button>
                     </div>
                   </form>
+
+                  <form id="form-onboard-02" class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px] hidden">
+                    <ol class="flex items-center  text-xs font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+                      <li class="flex md:w-full items-center text-Green_Lime  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                          <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                              </svg>
+                              Isi <span class="hidden sm:inline-flex sm:ml-2">Form</span>
+                          </span>
+                      </li>
+                      <li class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                        <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          Pilih <span class="hidden sm:inline-flex sm:ml-2">Penawaran</span>
+                      </span>
+                      </li>
+                      <li class="flex items-center text-xs text-left">
+                        <span class="flex ju text-sm items-center after:content-['/'] sm:after:hidden after:mx-6 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          <span>Tanda</span><span class="mx-2">Tangan </span><span>Dokumen</span>
+                      </span>
+                      </li>
+                  </ol>
+                    <div class="mb-4 mt-10">
+                      <h3 class="font-medium text-base">Nama Lengkap</h3>
+                      <input type="text" id="full_name" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. Priska Aprilia" >
+                    </div>
+                    <div class="mb-6">
+                      <h3 class="font-medium text-base">Alamat Lengkap</h3>
+                      <input type="Text" id="address" class="bg-white border-b-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. Jl. Sunter Garden Raya No.5D, RT.6/RW.12" >
+                    </div>
+
+                    <div class=" flex justify-start gap-3">
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">Tanggal Lahir</h3>
+                        <input type="date" id="date" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="Tanggal Lahir" >
+                      </div>
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">No Telp</h3>
+                        <input type="text" id="phone" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="No Telp" >
+                      </div>
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">No Telp Perusahaan</h3>
+                        <input type="text" id="company_phone" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. No Telp Prusahaan" >
+                      </div>
+                    </div>
+                    <div class=" flex justify-start gap-3">
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">No KTP</h3>
+                        <input type="number" id="number_id" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. 327123456789" required>
+                      </div>
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">No NPWP</h3>
+                        <input type="number" id="tax_id" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. 990998997996" required>
+                      </div>
+                      <div class="mb-4 mt-5">
+                        <h3 class="font-medium text-sm">Jumlah Pinjaman</h3>
+                        <input type="number" id="email" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="Rp 0" required>
+                      </div>
+                    </div>
+                    <div class="mb-4 mt-5">
+                      <h3 class="font-medium text-base">Nama Perusahaan</h3>
+                      <input type="text" id="company_name" class="bg-white border-b-2 border-gray-200 pb-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. PT Pembangunan Sejahtera" required>
+                    </div>
+                    <div class="mb-3">
+                      <h3 class="font-medium text-base">Alamat Perusahaan</h3>
+                      <input type="Text" id="company_address" class="bg-white border-b-2 text-Blue_Lime text-base my-4 w-full" placeholder="cth. Jl. Sunter Garden Raya No.5D, RT.6/RW.12" required>
+                    </div>
+                    <div class=" flex justify-between py-8 gap-4">
+                     
+                        <div class="flex items-center justify-center w-full">
+                          <label for="dropzone-file" class="flex flex-col items-center justify-center w-full py-2 rounded-lg cursor-pointer bg-blue-50">
+                              <div class="flex flex-col items-center justify-center pt-5 py-3">
+                                  <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                  </svg>
+                                  <p class="mb-2 text-sm text-center text-gray-500 dark:text-gray-400"><span class="font-semibold">Foto E-KTP</span> <br/>(Foto Belum Di Ungguah)</p>
+                              </div>
+                              <input id="dropzone-file" type="file" class="hidden" />
+                          </label>
+                        </div> 
+
+                        <div class="flex items-center justify-center w-full">
+                          <label for="dropzone-file" class="flex flex-col items-center justify-center w-full py-2 rounded-lg cursor-pointer bg-blue-50">
+                              <div class="flex flex-col items-center justify-center pt-5 py-3">
+                                  <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                  </svg>
+                                  <p class="mb-2 text-sm text-center text-gray-500 dark:text-gray-400"><span class="font-semibold">Dokumen Legal</span> <br/>(Foto Belum Di Ungguah)</p>
+                              </div>
+                              <input id="dropzone-file" type="file" class="hidden" />
+                          </label>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-center">
+                      <button type="button" onclick="hide02();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
+                  </div>
+                  
+                  </form>
+
+                  <div class="hidden" id="modals" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                    <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
+                      <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                          <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Pengajuan Anda Berhasil Diajukan!</div>
+                          <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Data pengajuan Anda telah kami terima dan akan diproses dalam waktu 2x24 jam.</div>
+                      </div>
+                      <div class="flex justify-center">
+                        <img src="./image/Hero Section/cs-illustration 1.svg">
+                      </div>
+                      <div class="flex justify-center">
+                        <button onclick="hide04();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
+                    </div>
+                      <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
+                  </div>
+                  </div>
+
+                  <form id="form-onboard-04" class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px] hidden">
+                    <ol class="flex items-center  text-xs font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+                      <li class="flex md:w-full items-center text-Green_Lime  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                          <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                              </svg>
+                              Isi <span class="hidden sm:inline-flex sm:ml-2">Form</span>
+                          </span>
+                      </li>
+                      <li class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                        <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          Pilih <span class="hidden sm:inline-flex sm:ml-2">Penawaran</span>
+                      </span>
+                      </li>
+                      <li class="flex items-center text-xs text-left">
+                        <span class="flex ju text-sm items-center after:content-['/'] sm:after:hidden after:mx-6 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          <span>Tanda</span><span class="mx-2">Tangan </span><span>Dokumen</span>
+                      </span>
+                      </li>
+                  </ol>
+                  <div class="w-full my-7" style="padding: 10px; background: #F7FBFD; border-radius: 5px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 5px; display: inline-flex">
+                    <div style="text-align: center; color: #C2DEF2; font-size: 14px; font-family: Lato; font-weight: 700; line-height: 18.90px; word-wrap: break-word">Jumlah Pinjaman</div>
+                    <div style="align-self: stretch; color: #4195D5; font-size: 24px; font-family: Lato; font-weight: 700; line-height: 32.40px; word-wrap: break-word">Rp 5.000.000</div>
+                  </div>
+                  <div class="mt-7 mb-7" style="text-align: center; color: #133F5D; font-size: 18px; font-family: Lato; font-weight: 700; line-height: 24.30px; word-wrap: break-word">Pilih penawaran untuk pinjaman Anda</div>
+
+                  <div class="shadow-md" style="width: 100%; padding: 10px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex">
+                    <div style="justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                        <div style="width: 24px; height: 24px; position: relative">
+                          <input required  id="checked-01" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        <img style="width: 154px; height: 24px" src="./image/Payment method/image 2.svg" />
+                    </div>
+                    <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div style="width: 156px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                            <div style="color: #718C9E; font-size: 14px; font-family: Lato; font-weight: 400; line-height: 19px; word-wrap: break-word">Jumlah Pinjaman</div>
+                            <div style="color: #133F5D; font-size: 14px; font-family: Lato; font-weight: 700; line-height: 18.90px; word-wrap: break-word">Rp 3.000.000,00</div>
+
+                        </div>
+                        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                            <div style="color: #718C9E; font-size: 14px; font-family: Lato; font-weight: 400; line-height: 19px; word-wrap: break-word">Fee</div>
+                            <div style="color: #133F5D; font-size: 14px; font-family: Lato; font-weight: 700; line-height: 18.90px; word-wrap: break-word">1.1%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-8 shadow-md" style="width: 100%; padding: 10px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex">
+                  <div style="justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                      <div style="width: 24px; height: 24px; position: relative">
+                        <input required id="checked-checkbox-02" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      </div>
+                      <img style="width: 154px; height: 24px" src="./image/Payment method/image 3.svg" />
+                  </div>
+                  <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                      <div style="width: 156px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                          <div style="color: #718C9E; font-size: 14px; font-family: Lato; font-weight: 400; line-height: 19px; word-wrap: break-word">Jumlah Pinjaman</div>
+                          <div style="color: #133F5D; font-size: 14px; font-family: Lato; font-weight: 700; line-height: 18.90px; word-wrap: break-word">Rp 2.000.000,00</div>
+                      </div>
+                      <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                          <div style="color: #718C9E; font-size: 14px; font-family: Lato; font-weight: 400; line-height: 19px; word-wrap: break-word">Fee</div>
+                          <div style="color: #133F5D; font-size: 14px; font-family: Lato; font-weight: 700; line-height: 18.90px; word-wrap: break-word">1.1%</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="flex justify-center">
+                <button onclick="show05();" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Simpan</button>
+            </div>
+
+                  </form>
+
+                  <form id="form-onboard-05" class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px] hidden">
+                    <ol class="flex items-center  text-xs font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+                      <li class="flex md:w-full items-center text-Green_Lime  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                          <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                              </svg>
+                              Isi <span class="hidden sm:inline-flex sm:ml-2">Form</span>
+                          </span>
+                      </li>
+                      <li class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-6 dark:after:border-gray-700">
+                        <span class="flex text-sm items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          Pilih <span class="hidden sm:inline-flex sm:ml-2">Penawaran</span>
+                      </span>
+                      </li>
+                      <li class="flex items-center text-xs text-left">
+                        <span class="flex ju text-sm items-center after:content-['/'] sm:after:hidden after:mx-6 after:text-gray-200 dark:after:text-gray-500">
+                          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                          </svg>
+                          <span>Tanda</span><span class="mx-2">Tangan </span><span>Dokumen</span>
+                      </span>
+                      </li>
+                  </ol>
+                  <h3 class="pt-8">Silahkan Unggah Tanda Tangan Anda</h3>
+
+                  <div class="flex items-center justify-center w-full pt-3 pb-9">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-blue-300 border-dashed rounded-lg cursor-pointer bg-blue-50">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                  </div> 
+
+
+                  <div class="flex justify-center">
+                    <button onclick="showmodal02();" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
+                </div>
+
+
+                  </form>
+                  <div class="hidden" id="modals-02" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                    <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
+                      <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                          <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Selamat, Limit Anda Sudah Aktif!</div>
+                          <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Anda sudah dapat melakukan transaksi di Paper.id menggunakan limit Paper Usaha.</div>
+                      </div>
+                      <div class="flex justify-center">
+                        <img src="./image/Hero Section/Percepatan Pembayaran 2 (1) 1.svg">
+                      </div>
+                      <div class="flex justify-center">
+                        <button type="button"  onclick="showmodal03();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
+                    </div>
+                      <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
+                  </div>
+                  </div>
+                  
+                  <div class="hidden" id="modals-03" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                    <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
+                      <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                          <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Siap untuk mencoba Paper.id?</div>
+                          <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Paper.id dapat membantu Anda mendapatkan pembayaran lebih cepat untuk bisnis Anda!.</div>
+                      </div>
+                      <div class="flex justify-center">
+                        <img src="./image/Modals/Kerja-Sama2 1.svg">
+                      </div>
+                      <div class="flex justify-center">
+                        <button onclick="hideshow03();" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
+                    </div>
+                      <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
+                  </div>
+                  </div>
+
             </div>
         </div>
     </div>
@@ -264,7 +547,7 @@
             </div>
             <div class="my-6">
               <div style="padding: 10px; justify-content: flex-start; align-items: flex-start; gap: 18px; display: inline-flex">
-                <input onclick="show3();" style="width: 20px; height: 20px; background: white; border-radius: 9999px; border: 1.50px #9AA6B0 solid" type="radio" id="css" name="fav_language" value="CSS">
+                <input onclick="show3();" style="width: 20px; height: 20px; background: white; border-radius: 9999px; border: 1.50px #9AA6B0 solid" type="radio" id="css3" name="fav_language" value="CSS">
                 <div style="width: 103px; height: 20px; border-radius: 5px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex">
                     <img style="width: 67px; height: 18px" src="image/Payment method/image 3.svg" />
                 </div>
@@ -697,7 +980,43 @@ aria-hidden="true">
 
 </div>
 
+<script>
+  function hide01(){
+  document.getElementById('form-onboard-01').style.display='none';
+  document.getElementById('form-onboard-02').style.display='block';
 
+}
+function hide02(){
+  document.getElementById('form-onboard-02').style.display='none';
+  document.getElementById('modals').style.display='block';
+}
+function hide04(){
+  document.getElementById('modals').style.display='none';
+  document.getElementById('form-onboard-04').style.display='block';
+}
+
+
+function show05(){
+  document.getElementById('form-onboard-04').style.display='none';
+  document.getElementById('form-onboard-05').style.display='block';
+}
+
+function showmodal02(){
+  document.getElementById('form-onboard-05').style.display='none';
+  document.getElementById('modals-02').style.display='block';
+}
+function showmodal03(){
+  document.getElementById('modals-02').style.display='none';
+  document.getElementById('modals-03').style.display='block';
+}
+
+function hideshow03(){
+  document.getElementById('modals-03').style.display='none';
+  document.getElementById('form-onboard-01').style.display='block';
+
+  
+}
+</script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
@@ -714,6 +1033,8 @@ function show3(){
   document.getElementById('div2').style.display = 'flex';
 
 }
+
+
 </script>
 
 

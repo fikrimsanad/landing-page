@@ -202,26 +202,32 @@
                     </div>
 
                     <div class="flex justify-center">
-                      <button type="button" onclick="hide02();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
+                      <button id="myBtn" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
                   </div>
                   
                   </form>
 
-                  <div class="hidden" id="modals" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
-                    <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
-                      <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                          <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Pengajuan Anda Berhasil Diajukan!</div>
-                          <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Data pengajuan Anda telah kami terima dan akan diproses dalam waktu 2x24 jam.</div>
+
+                    <div id="myModal" class="hidden fixed z-40 left-0 top-0 right-0 bottom-0 overflow-auto">
+                      <div class="relative px-8 py-80" style="background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                        <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
+                          <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                              <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Pengajuan Anda Berhasil Diajukan!</div>
+                              <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Data pengajuan Anda telah kami terima dan akan diproses dalam waktu 2x24 jam.</div>
+                          </div>
+                          <div class="flex justify-center">
+                            <img src="./image/Hero Section/cs-illustration 1.svg">
+                          </div>
+                          <div class="flex justify-center">
+                            <button onclick="hide04();" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
+                        </div>
+                          <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
                       </div>
-                      <div class="flex justify-center">
-                        <img src="./image/Hero Section/cs-illustration 1.svg">
                       </div>
-                      <div class="flex justify-center">
-                        <button onclick="hide04();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
                     </div>
-                      <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
-                  </div>
-                  </div>
+
+
+                
 
                   <form id="form-onboard-04" class="bg-white px-4 sm:px-6 py-5 sm:min-w-[540px] hidden">
                     <ol class="flex items-center  text-xs font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
@@ -345,28 +351,31 @@
 
 
                   <div class="flex justify-center">
-                    <button onclick="showmodal02();" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
+                    <button id="myBtn2" type="button" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-11 py-3 text-center">Simpan</button>
                 </div>
 
 
                   </form>
-                  <div class="hidden" id="modals-02" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
-                    <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
-                      <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                          <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Selamat, Limit Anda Sudah Aktif!</div>
-                          <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Anda sudah dapat melakukan transaksi di Paper.id menggunakan limit Paper Usaha.</div>
+                  <div id="myModal2" class="hidden fixed z-40 left-0 top-0 right-0 bottom-0 overflow-auto">
+                    <div class="px-8 py-8" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                      <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
+                        <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                            <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Selamat, Limit Anda Sudah Aktif!</div>
+                            <div style="align-self: stretch; opacity: 0.70; text-align: center; color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Anda sudah dapat melakukan transaksi di Paper.id menggunakan limit Paper Usaha.</div>
+                        </div>
+                        <div class="flex justify-center">
+                          <img src="./image/Hero Section/Percepatan Pembayaran 2 (1) 1.svg">
+                        </div>
+                        <div class="flex justify-center">
+                          <button type="button" id="myBtn3" class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
                       </div>
-                      <div class="flex justify-center">
-                        <img src="./image/Hero Section/Percepatan Pembayaran 2 (1) 1.svg">
-                      </div>
-                      <div class="flex justify-center">
-                        <button type="button"  onclick="showmodal03();"  class="text-white bg-Green_Lime hover:bg-green-700 font-medium rounded-full text-sm w-full sm:w-auto px-16 py-3 text-center">Ya Saya Mengerti</button>
+                        <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
                     </div>
-                      <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
-                  </div>
+                    </div>
                   </div>
                   
-                  <div class="hidden" id="modals-03" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
+                 <div id="myModal3" class="hidden fixed z-40 left-0 top-0 right-0 bottom-0 overflow-auto">
+                  <div class="px-8 py-8" style="width: 100%; height: 100%; background: rgba(19, 63, 93, 0.80); border-radius: 10px hidden">
                     <div style="width: 100%; height: 100%; padding-left: 16px; padding-right: 16px; padding-top: 24px; padding-bottom: 24px; background: linear-gradient(133deg, #1E79B7 0%, #004575 100%); border-radius: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 24px; display: inline-flex">
                       <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
                           <div style="align-self: stretch; text-align: center; color: white; font-size: 15px; font-family: Lato; font-weight: 700; line-height: 20.25px; word-wrap: break-word">Siap untuk mencoba Paper.id?</div>
@@ -381,6 +390,7 @@
                       <div style="align-self: stretch; opacity: 0.70; text-align: center"><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">Butuh bantuan? Hubungi kami </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">0821-1767-9137</span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word"> </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 400; line-height: 17.55px; word-wrap: break-word">atau klik </span><span style="color: white; font-size: 13px; font-family: Lato; font-weight: 700; line-height: 17.55px; word-wrap: break-word">di sini</span></div>
                   </div>
                   </div>
+                 </div>
 
             </div>
         </div>
@@ -991,7 +1001,8 @@ function hide02(){
   document.getElementById('modals').style.display='block';
 }
 function hide04(){
-  document.getElementById('modals').style.display='none';
+  document.getElementById('myModal').style.display='none';
+  document.getElementById('form-onboard-02').style.display='none';
   document.getElementById('form-onboard-04').style.display='block';
 }
 
@@ -1011,15 +1022,17 @@ function showmodal03(){
 }
 
 function hideshow03(){
-  document.getElementById('modals-03').style.display='none';
   document.getElementById('form-onboard-01').style.display='block';
+  document.getElementById('myModal3').style.display='none';
+  document.getElementById('form-onboard-05').style.display='none';
+
+
 
   
 }
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 
 <script>
@@ -1056,6 +1069,98 @@ function show3(){
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
+
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
   
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+
+  <script>
+    // Get the modal
+    var modal2 = document.getElementById("myModal2");
+    
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal2.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal2.style.display = "none";
+      }
+    }
+    </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+  var modal2 = document.getElementById("myModal2");
+
+  
+  // Get the button that opens the modal
+  var btn3 = document.getElementById("myBtn3");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn3.onclick = function() {
+    modal3.style.display = "block";
+    modal2.style.display = "none";
+
+    
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal3.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal3.style.display = "none";
+    }
+  }
+  </script>
+
+
 </body>
 </html>
